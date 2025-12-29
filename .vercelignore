@@ -1,6 +1,6 @@
 node_modules
-src
 .env.local
 .env.development
 *.log
 .DS_Store
+README-VERCEL.md

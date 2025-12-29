@@ -6,9 +6,7 @@
     "dev": "nodemon --watch src --ext ts --exec node --loader ts-node/esm src/index.ts",
     "build": "npm run clean && npx tsc",
     "start": "node dist/index.js",
-    "clean": "node -e \"const fs = require('fs'); const path = require('path'); const deleteFiles = (dir, exts) => { if (fs.existsSync(dir)) fs.readdirSync(dir, {recursive: true, withFileTypes: true}).forEach(f => { if (f.isFile() && exts.some(ext => f.name.endsWith(ext))) fs.unlinkSync(path.join(f.path || f.parentPath, f.name)); }); }; deleteFiles('src', ['.js', '.d.ts', '.js.map', '.d.ts.map']); if (fs.existsSync('dist')) fs.rmSync('dist', {recursive: true, force: true}); console.log('✅ Cleaned compiled files');\"",
-    "vercel-build": "npm run build",
-    "postinstall": "npx tsc --version"
+    "clean": "node -e \"const fs = require('fs'); const path = require('path'); const deleteFiles = (dir, exts) => { if (fs.existsSync(dir)) fs.readdirSync(dir, {recursive: true, withFileTypes: true}).forEach(f => { if (f.isFile() && exts.some(ext => f.name.endsWith(ext))) fs.unlinkSync(path.join(f.path || f.parentPath, f.name)); }); }; deleteFiles('src', ['.js', '.d.ts', '.js.map', '.d.ts.map']); if (fs.existsSync('dist')) fs.rmSync('dist', {recursive: true, force: true}); console.log('✅ Cleaned compiled files');\""
   },
   "keywords": [],
   "author": "",
