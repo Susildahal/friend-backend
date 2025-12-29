@@ -1,0 +1,12 @@
+node_modules
+.env
+dist
+
+# Compiled JS files in src directory
+src/**/*.js
+src/**/*.d.ts
+src/**/*.js.map
+src/**/*.d.ts.map
+
+# Keep .js files in root if needed
+!*.config.js
